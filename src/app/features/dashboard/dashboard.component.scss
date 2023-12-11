@@ -1,0 +1,10 @@
+$pageHeight: 3.5rem;
+
+.container {
+  height: $pageHeight;
+  width: 100%;
+  background-color: aquamarine;
+  &-body {
+    height: calc(100vh - $pageHeight);
+  }
+}

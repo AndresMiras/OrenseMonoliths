@@ -1,0 +1,44 @@
+<section class="container">
+  <ng-container *ngIf="selectedModelProperties.hasOwnProperty('images'); else elseLoad3dModel">
+    <!-- Aquí iría el acordeon de marras -->
+  </ng-container>
+  <ng-template #elseLoad3dModel>
+    <article class="container-model" #model id="model"></article>
+  </ng-template>
+  <article class="description">
+    <table width="100%" border="1" bordercolor="black" cellspacing="10" cellpadding="10">
+      <tr>
+        <td><h5></h5>Autor</td>
+        <td><p>{{selectedModelProperties.author}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Nome</td>
+        <td><p>{{selectedModelProperties.name}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Peza</td>
+        <td><p>{{selectedModelProperties.n}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Técnica</td>
+        <td><p>{{selectedModelProperties.technique}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Dimensións</td>
+        <td><p>{{getUnits(selectedModelProperties)}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Vulnerabilidades</td>
+        <td><p>{{selectedModelProperties.vulnerability}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Materiais</td>
+        <td><p>{{selectedModelProperties.material}}</p></td>
+      </tr>
+      <tr>
+        <td><h5></h5>Impresión en Roca</td>
+        <td><p>{{selectedModelProperties.rockPrintType}}</p></td>
+      </tr>
+    </table>
+  </article>
+</section>
